@@ -25,7 +25,7 @@ parameters {
                             owner: params.OWNER
                         ]
                         echo "Repository Details: ${repoDetails}"
-                        githubSetup(repoDetails)
+                        gitHubSetup(repoDetails)
                     }
                 }
             }
