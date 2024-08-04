@@ -1,7 +1,7 @@
 @Library('jenkinsSharedLibraryExt_v2')_
 
 pipeline {
-    agent: any 
+    agent any 
 
 
 parameters {
@@ -14,7 +14,7 @@ parameters {
 
 
     stages {
-        stage {'checkParams'} {
+        stage ('checkParams') {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'GITHUB-TOKEN', variable: 'TOKEN')]) {
