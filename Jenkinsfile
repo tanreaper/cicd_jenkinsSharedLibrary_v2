@@ -21,7 +21,7 @@ parameters {
                         def repoDetails = [
                             name: params.GITHUB_REPO,
                             description: params.REPO_DESCRIPTION,
-                            private: params.GITHUB_REPO_TYPE == 'private'
+                            private: params.GITHUB_REPO_TYPE == 'private',
                             owner: params.OWNER
                         ]
                         echo "Repository Details: ${repoDetails}"
