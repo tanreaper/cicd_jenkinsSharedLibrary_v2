@@ -4,6 +4,7 @@ def call(Map repoDetails) {
         key, value ->
             println "${key} : ${value}"
     }
+    echo " private : ${repoDetails.private}"
     sh """
         curl -H "Authorization: token ${TOKEN}" \
         -H "Content-Type: application/json" \
