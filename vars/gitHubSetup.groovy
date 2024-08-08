@@ -16,5 +16,16 @@ def call(Map repoDetails) {
         }' \
         "${globalVars.GITHUB_BASE_URL}/user/repos"
     """
+
+    // use https request plugin
+    // https://plugins.jenkins.io/http_request/
     
+}
+
+def createRepowithHttp(repoDetails) {
+    // use https request plugin
+    // https://plugins.jenkins.io/http_request/
+}
+def deleteRepo(repoDetails) {
+    //deleting the Repo
 }

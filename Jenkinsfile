@@ -20,6 +20,8 @@ parameters {
         stage ('checkParams') {
             steps {
                 script {
+
+                    //Take user input for repo creation.
                     // withCredentials([string(credentialsId: 'GITHUB-TOKEN', variable: 'TOKEN')]) {
                         def repoDetails = [
                             name: params.GITHUB_REPO_NAME,
