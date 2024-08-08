@@ -27,7 +27,7 @@ parameters {
                             private: params.GITHUB_REPO_TYPE == 'private',
                             owner: params.OWNER
                         ]
-                        echo "Repository Details: ${repoDetails, }"
+                        echo "Repository Details: ${repoDetails}"
                         gitHubSetup(repoDetails)
                     // }
                 }
