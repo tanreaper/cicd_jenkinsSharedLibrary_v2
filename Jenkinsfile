@@ -22,7 +22,7 @@ parameters {
                 script {
                     // withCredentials([string(credentialsId: 'GITHUB-TOKEN', variable: 'TOKEN')]) {
                         def repoDetails = [
-                            name: params.GITHUB_REPO,
+                            name: params.GITHUB_REPO_NAME,
                             description: params.REPO_DESCRIPTION,
                             private: params.GITHUB_REPO_TYPE == 'private',
                             owner: params.OWNER
