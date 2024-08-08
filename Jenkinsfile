@@ -33,8 +33,5 @@ parameters {
                 }
             }
         }
-        stage ('createRepo') {
-            
-        }
     }   
 }
