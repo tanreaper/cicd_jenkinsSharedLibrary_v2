@@ -3,6 +3,9 @@
 pipeline {
     agent any 
 
+environment {
+    def TOKEN = credentials('GITHUB-TOKEN')
+}
 
 parameters {
         choice          (name: 'GITHUB_REPO', choices:['add', 'delete'], description: 'Add or delete a repository')
@@ -17,18 +20,21 @@ parameters {
         stage ('checkParams') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'GITHUB-TOKEN', variable: 'TOKEN')]) {
+                    // withCredentials([string(credentialsId: 'GITHUB-TOKEN', variable: 'TOKEN')]) {
                         def repoDetails = [
                             name: params.GITHUB_REPO,
                             description: params.REPO_DESCRIPTION,
                             private: params.GITHUB_REPO_TYPE == 'private',
                             owner: params.OWNER
                         ]
-                        echo "Repository Details: ${repoDetails}"
+                        echo "Repository Details: ${repoDetails, }"
                         gitHubSetup(repoDetails)
-                    }
+                    // }
                 }
             }
+        }
+        stage ('createRepo') {
+            
         }
     }   
 }
