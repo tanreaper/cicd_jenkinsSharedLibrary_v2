@@ -9,9 +9,9 @@ def call(Map repoDetails) {
         -H "Content-Type: application/json" \
         -d '{
         "name": "${repoDetails.name}",
-        "description": "{repoDetails.description}",
-        "private": "{repoDetails.private}",
-        "owner": "{repoDetails.owner}"
+        "description": "${repoDetails.description}",
+        "private": "${repoDetails.private}",
+        "owner": "${repoDetails.owner}"
         }' \
         "${globalVars.GITHUB_BASE_URL}/user/repos"
     """
